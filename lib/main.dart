@@ -28,17 +28,14 @@ class _AppFirebaseState extends State<AppFirebase> {
           return Material(
               child: Center(
                   child: Text(
-            "Erro ao iniciar o Firebase",
+            "Erro ao Iniciar o Firebase. Contate o Suporte!",
             textDirection: TextDirection.ltr,
           )));
-        }
-
-        // Once complete, show your application
-        if (snapshot.connectionState == ConnectionState.done) {
+        } else if (snapshot.connectionState == ConnectionState.done) {
           return AppWidget();
+        } else {
+          return Material(child: Center(child: CircularProgressIndicator()));
         }
-        // Otherwise, show something whilst waiting for initialization to complete
-        return Material(child: Center(child: CircularProgressIndicator()));
       },
     );
   }
