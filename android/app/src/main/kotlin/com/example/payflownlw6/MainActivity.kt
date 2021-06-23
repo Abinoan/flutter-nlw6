@@ -1,4 +1,4 @@
-package com.example.payflownlw6
+package br.com.abinoan.payflow
 
 import io.flutter.embedding.android.FlutterActivity
 
